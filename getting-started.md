@@ -6,15 +6,6 @@ You have already created an instance of Riak CS via the broker, and have receive
 ```
 "VCAP_SERVICES":
 {
-  "user-provided": [
-    {
-      "name": "heyo",
-      "label": "user-provided",
-      "tags": [],
-      "credentials": {},
-      "syslog_drain_url": ""
-    }
-  ],
   "p-riakcs": [
     {
       "name": "asdf",
