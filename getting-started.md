@@ -1,6 +1,6 @@
 #Getting Started with Riak CS
 
-###Assumptions:
+###Prerequisites:
 
 You have created a service instance, bound it to an application, and have the binding credentials from the VCAP_SERVICES environment variable.
 ```
@@ -28,7 +28,6 @@ As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you 
 
 ##s3curl
 
-###Pre-requisites
 Clone s3curl from github:
 
 `git clone https://github.com/rtdp/s3curl`
@@ -59,7 +58,6 @@ my @endpoints = ( 's3.amazonaws.com',
 ...
 ```
 *Note: If you never intend on communicating with any of the amazon services, then you can delete the existing entries (the ones beginning with 's3').*
-###Operation
 
 To list bucket contents at service-instance-location:
 
@@ -77,8 +75,6 @@ To get file with key `mykey` from bucket:
 
 ##fog
 
-###Pre-requisites
-
 Create a ruby client object (requires fog):
 
 ```
@@ -94,7 +90,6 @@ basic_client = Fog::Storage.new(
   aws_secret_access_key: 'my-secret-access-key')
 ```
 
-###Operation
 To list bucket contents at service-instance-location:
 
 `basic_client.get_bucket('service-instance-id')`
