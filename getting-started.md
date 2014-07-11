@@ -16,7 +16,7 @@ You have created a service instance, bound it to an application, and have the bi
       ],
       "plan": "developer",
       "credentials": {
-        "uri": "https://my-access-key-id:url-encoded-my-secret-access-key@p-riakcs.domain/service-instance-id",
+        "uri": "https://my-access-key-id:url-encoded-my-secret-access-key@p-riakcs.mydomain/service-instance-id",
         "access_key_id": "my-access-key-id",
         "secret_access_key": "my-secret-access-key"
       }
@@ -43,7 +43,7 @@ Add credentials to `~/.s3curl`:
 );
 ```
 
-Edit `s3curl.pl` to add `myriak.hostname` to the known endpoints:
+Edit `s3curl.pl` to add `myriak.myhostname` to the known endpoints:
 
 ```
 ...
