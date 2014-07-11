@@ -2,13 +2,13 @@
 
 ###Assumptions:
 
-You have already created an instance of Riak CS via the broker, and have received VCAP_SERVICES info in the form below:
+You have created a service instance, bound it to an application, and have the binding credentials from the VCAP_SERVICES environment variable.
 ```
 "VCAP_SERVICES":
 {
   "p-riakcs": [
     {
-      "name": "asdf",
+      "name": "mybucket",
       "label": "p-riakcs",
       "tags": [
         "riak-cs",
@@ -16,7 +16,7 @@ You have already created an instance of Riak CS via the broker, and have receive
       ],
       "plan": "developer",
       "credentials": {
-        "uri": "https://my-access-key-id:url-encoded-my-secret-access-key@myriak.hostname/service-instance-location",
+        "uri": "https://my-access-key-id:url-encoded-my-secret-access-key@p-riakcs.domain/service-instance-id",
         "access_key_id": "my-access-key-id",
         "secret_access_key": "my-secret-access-key"
       }
@@ -36,7 +36,7 @@ Clone s3curl from github:
 Add credentials to `~/.s3curl`:
 ```
 %awsSecretAccessKeys = (
-    friendlyuser => {
+    myuser => {
         id => 'my-access-key-id',
         key => 'my-secret-access-key'
     }
@@ -55,7 +55,7 @@ my @endpoints = ( 's3.amazonaws.com',
                   's3-ap-southeast-1.amazonaws.com',
                   's3-ap-northeast-1.amazonaws.com',
                   's3-sa-east-1.amazonaws.com',
-                  'myriak.hostname');
+                  'p-riakcs.domain');
 ...
 ```
 *Note: If you never intend on communicating with any of the amazon services, then you can delete the existing entries (the ones beginning with 's3').*
@@ -63,17 +63,17 @@ my @endpoints = ( 's3.amazonaws.com',
 
 To list bucket contents at service-instance-location:
 
-`./s3curl.pl --id friendlyuser -- http://riak.hostname/service-instance-location`
+`./s3curl.pl --id myuser -- http://p-riakcs.domain/service-instance-id`
 
 To put contents file to bucket with key `mykey`:
 
-`./s3curl.pl --id friendlyuser --put filename -- http://riak.hostname/service-instance-location/mykey`
+`./s3curl.pl --id myuser --put filename -- http://p-riakcs.domain/service-instance-id/mykey`
 
 *Note: curl requires you to escape any special characters in filenames - e.g. filename\\.txt*
 
 To get file with key `mykey` from bucket:
 
-`./s3curl.pl --id friendlyuser -- http://riak.hostname/service-instance-location/mykey`
+`./s3curl.pl --id myuser -- http://p-riakcs.domain/service-instance-id/mykey`
 
 ##fog
 
@@ -87,7 +87,7 @@ require 'fog'
 basic_client = Fog::Storage.new(
   provider: 'AWS',
   path_style: true,
-  host: 'myriak.hostname',
+  host: 'p-riakcs.domain',
   port: 80,
   scheme: 'http',
   aws_access_key_id: 'my-access-key-id',
@@ -97,12 +97,12 @@ basic_client = Fog::Storage.new(
 ###Operation
 To list bucket contents at service-instance-location:
 
-`basic_client.get_bucket('service-instance-location')`
+`basic_client.get_bucket('service-instance-id')`
 
 To put text to bucket with key `mykey`:
 
-`basic_client.put_object('service-instance-location','mykey','my text here')`
+`basic_client.put_object('service-instance-id','mykey','my text here')`
 
 To get file with key `mykey` from bucket:
 
-`basic_client.get_object('service-instance-location', 'mykey')`
+`basic_client.get_object('service-instance-id', 'mykey')`
