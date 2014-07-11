@@ -28,7 +28,7 @@ As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you 
 
 ##s3curl
 
-Clone s3curl from github:
+s3curl is a Perl script. Clone it from github:
 
 `git clone https://github.com/rtdp/s3curl`
 
