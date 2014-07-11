@@ -42,7 +42,7 @@ Add credentials to `~/.s3curl`:
 );
 ```
 
-Edit `s3curl.pl` to add `myriak.myhostname` to the known endpoints:
+Edit `s3curl.pl` to add `p-riakcs.myhostname` to the known endpoints:
 
 ```
 ...
@@ -54,24 +54,24 @@ my @endpoints = ( 's3.amazonaws.com',
                   's3-ap-southeast-1.amazonaws.com',
                   's3-ap-northeast-1.amazonaws.com',
                   's3-sa-east-1.amazonaws.com',
-                  'p-riakcs.domain');
+                  'p-riakcs.mydomain');
 ...
 ```
 *Note: If you never intend on communicating with any of the amazon services, then you can delete the existing entries (the ones beginning with 's3').*
 
 To list bucket contents at service-instance-location:
 
-`./s3curl.pl --id myuser -- http://p-riakcs.domain/service-instance-id`
+`./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id`
 
 To put contents file to bucket with key `mykey`:
 
-`./s3curl.pl --id myuser --put filename -- http://p-riakcs.domain/service-instance-id/mykey`
+`./s3curl.pl --id myuser --put filename -- http://p-riakcs.mydomain/service-instance-id/mykey`
 
 *Note: curl requires you to escape any special characters in filenames - e.g. filename\\.txt*
 
 To get file with key `mykey` from bucket:
 
-`./s3curl.pl --id myuser -- http://p-riakcs.domain/service-instance-id/mykey`
+`./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey`
 
 ##fog
 
@@ -83,7 +83,7 @@ require 'fog'
 basic_client = Fog::Storage.new(
   provider: 'AWS',
   path_style: true,
-  host: 'p-riakcs.domain',
+  host: 'p-riakcs.mydomain',
   port: 80,
   scheme: 'http',
   aws_access_key_id: 'my-access-key-id',
