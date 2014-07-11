@@ -2,7 +2,7 @@
 
 ###Prerequisites:
 
-You have created a service instance, bound it to an application, and have the binding credentials from the VCAP_SERVICES environment variable.
+You have created a service instance, bound it to an application, and have binding credentials from the VCAP_SERVICES environment variable.
 ```
 "VCAP_SERVICES":
 {
