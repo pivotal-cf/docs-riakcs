@@ -75,6 +75,10 @@ To get file with key `mykey` from bucket:
 
 ##fog
 
+Install the fog gem:
+
+`gem install fog`
+
 Create a ruby client object (requires fog):
 
 ```
@@ -89,6 +93,7 @@ basic_client = Fog::Storage.new(
   aws_access_key_id: 'my-access-key-id',
   aws_secret_access_key: 'my-secret-access-key')
 ```
+*Note: try this in irb with `irb -r 'fog'` and then create the client object*
 
 To list bucket contents at service-instance-location:
 
