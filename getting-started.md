@@ -24,7 +24,7 @@ You have created a service instance, bound it to an application, and have bindin
   ]
 }
 ```
-As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you to communicate with your Riak CS instance. One that we have found simple to use is [s3curl](https://github.com/rtdp/s3curl), although others include [s3cmd](http://s3tools.org/s3cmd), and the ruby library [fog](http://fog.io/).
+As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you to communicate with your Riak CS instance. One that we have found simple to use is [s3curl](https://github.com/rtdp/s3curl), although others include [s3cmd](http://s3tools.org/s3cmd), the ruby library [fog](http://fog.io/) and a [java client](https://github.com/cloudfoundry-incubator/riakcs-java-client).
 
 ##s3curl
 
@@ -108,3 +108,7 @@ To put text to bucket with key `mykey`:
 To get file with key `mykey` from bucket:
 
 `basic_client.get_object('service-instance-id', 'mykey')`
+
+##Java
+
+See the [README](https://github.com/cloudfoundry-incubator/riakcs-java-client/blob/master/README.md) of our forked java-client repo.
