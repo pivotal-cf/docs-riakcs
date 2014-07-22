@@ -3,6 +3,7 @@
 ###Prerequisites:
 
 You have created a service instance, bound it to an application, and have binding credentials from the VCAP_SERVICES environment variable.
+
 ```
 "VCAP_SERVICES":
 {
@@ -24,8 +25,10 @@ You have created a service instance, bound it to an application, and have bindin
   ]
 }
 ```
+
 As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you to communicate with your Riak CS instance. One that we have found simple to use is [s3curl](https://github.com/rtdp/s3curl), although others include [s3cmd](http://s3tools.org/s3cmd), the ruby library [fog](http://fog.io/) and a [java client](https://github.com/cloudfoundry-incubator/riakcs-java-client).
 
+<a id='s3curl'></a>
 ##s3curl
 
 s3curl is a Perl script. Clone it from github:
@@ -33,6 +36,7 @@ s3curl is a Perl script. Clone it from github:
 `git clone https://github.com/rtdp/s3curl`
 
 Add credentials to `~/.s3curl`:
+
 ```
 %awsSecretAccessKeys = (
     myuser => {
@@ -73,6 +77,69 @@ To get file with key `mykey` from bucket:
 
 `./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey`
 
+<a id='s3cmd'></a>
+##s3cmd
+
+[s3cmd](http://s3tools.org/s3cmd) is a commandline client for connecting to S3 compatible blobstores.
+
+A `.s3cfg` file is needed to configure s3cmd to talk to your Riak CS cluster.
+
+An example is provided below. Please adjust the `access_key`, `secret_key`, `host_base`, `host_bucket`, and `proxy_host` parameters to match your Riak CS cluster config.
+
+```
+[default]
+access_key = admin-key
+bucket_location = US
+cloudfront_host = cloudfront.amazonaws.com
+cloudfront_resource = /2010-07-15/distribution
+default_mime_type = binary/octet-stream
+delete_removed = False
+dry_run = False
+encoding = UTF-8
+encrypt = False
+follow_symlinks = False
+force = False
+get_continue = False
+gpg_command = None
+gpg_decrypt = %(gpg_command)s -d --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_encrypt = %(gpg_command)s -c --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
+gpg_passphrase =
+guess_mime_type = True
+host_base = p-riakcs.10.244.0.34.xip.io
+host_bucket = p-riakcs.10.244.0.34.xip.io/%(bucket)s
+human_readable_sizes = False
+list_md5 = False
+log_target_prefix =
+preserve_attrs = True
+progress_meter = True
+proxy_host = p-riakcs.10.244.0.34.xip.io
+proxy_port = 80
+recursive = False
+recv_chunk = 4096
+reduced_redundancy = False
+secret_key = admin-secret
+send_chunk = 4096
+simpledb_host = sdb.amazonaws.com
+skip_existing = False
+socket_timeout = 300
+urlencoding_mode = normal
+use_https = False
+verbosity = WARNING
+```
+
+Bucket contents can be downloaded with the following command:
+
+```
+s3cmd -c .s3cfg sync s3://bucket-name /destination/directory
+```
+
+Uploading data to a bucket can be done like this:
+
+```
+s3cmd -c .s3cfg sync /source/directory s3://bucket-name
+```
+
+<a id='fog'></a>
 ##fog
 
 *Note: requires ruby to be installed.*
@@ -109,6 +176,7 @@ To get file with key `mykey` from bucket:
 
 `basic_client.get_object('service-instance-id', 'mykey')`
 
+<a id='java'></a>
 ##Java
 
 See the [README](https://github.com/cloudfoundry-incubator/riakcs-java-client/blob/master/README.md) of our forked java-client repo.
