@@ -1,8 +1,15 @@
-#Getting Started with Riak CS
+#Clients for Riak CS
 
-###Prerequisites:
+As Riak CS is API-compliant with Amazon S3, any Amazon s3 client should allow you to communicate with your Riak CS instance. Here are a few we have validated to work with Riak CS for Pivotal CF.
 
-You have created a service instance, bound it to an application, and have binding credentials from the VCAP_SERVICES environment variable.
+- [s3curl](#s3curl) - Perl script that wraps curl (Apache2 license)
+- [s3cmd](#s3cmd) - Command line S3 client written in Python (GPLv2 license)
+- [fog](#fog) - this Ruby library is the swiss-army knife for the cloud (MIT license)
+- [java client](#java) - a fork of Basho's java client (Apache2 license forthcoming)
+
+##Prerequisites
+
+You have created a service instance, bound it to an application, and have binding credentials from the VCAP\_SERVICES environment variable.
 
 ```
 "VCAP_SERVICES":
@@ -26,12 +33,9 @@ You have created a service instance, bound it to an application, and have bindin
 }
 ```
 
-As Riak CS is API-compliant with Amazon S3, any Amazon s3 client will allow you to communicate with your Riak CS instance. One that we have found simple to use is [s3curl](https://github.com/rtdp/s3curl), although others include [s3cmd](http://s3tools.org/s3cmd), the ruby library [fog](http://fog.io/) and a [java client](https://github.com/cloudfoundry-incubator/riakcs-java-client).
+##<a id='s3curl'></a>s3curl
 
-<a id='s3curl'></a>
-##s3curl
-
-s3curl is a Perl script. Clone it from github:
+[s3curl](https://github.com/rtdp/s3curl) is a Perl script. Clone it from github:
 
 `git clone https://github.com/rtdp/s3curl`
 
@@ -77,10 +81,9 @@ To get file with key `mykey` from bucket:
 
 `./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey`
 
-<a id='s3cmd'></a>
-##s3cmd
+##<a id='s3cmd'></a>s3cmd
 
-[s3cmd](http://s3tools.org/s3cmd) is a commandline client for connecting to S3 compatible blobstores.
+[s3cmd](http://s3tools.org/s3cmd) is a command line client for connecting to S3 compatible blobstores.
 
 A `.s3cfg` file is needed to configure s3cmd to talk to your Riak CS cluster.
 
@@ -139,10 +142,9 @@ Uploading data to a bucket can be done like this:
 s3cmd -c .s3cfg sync /source/directory s3://bucket-name
 ```
 
-<a id='fog'></a>
-##fog
+##<a id='fog'></a>fog
 
-*Note: requires ruby to be installed.*
+[Fog](http://fog.io) requires Ruby to be installed.
 
 Install the fog gem:
 
@@ -176,7 +178,6 @@ To get file with key `mykey` from bucket:
 
 `basic_client.get_object('service-instance-id', 'mykey')`
 
-<a id='java'></a>
-##Java
+##<a id='java'></a>Java Client
 
-See the [README](https://github.com/cloudfoundry-incubator/riakcs-java-client/blob/master/README.md) of our forked java-client repo.
+See the [repo README](https://github.com/cloudfoundry-incubator/riakcs-java-client/) for documentation
