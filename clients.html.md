@@ -37,7 +37,9 @@ You have created a service instance, bound it to an application, and have bindin
 
 [s3curl](https://github.com/rtdp/s3curl) is a Perl script. Clone it from github:
 
-`git clone https://github.com/rtdp/s3curl`
+<pre class="terminal">
+$ git clone https://github.com/rtdp/s3curl
+</pre>
 
 Add credentials to `~/.s3curl`:
 
@@ -69,17 +71,23 @@ my @endpoints = ( 's3.amazonaws.com',
 
 To list bucket contents at service-instance-location:
 
-`./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id`
+<pre class="terminal">
+$ ./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id
+</pre>
 
 To put contents file to bucket with key `mykey`:
 
-`./s3curl.pl --id myuser --put filename -- http://p-riakcs.mydomain/service-instance-id/mykey`
+<pre class="terminal">
+$ ./s3curl.pl --id myuser --put filename -- http://p-riakcs.mydomain/service-instance-id/mykey
+</pre>
 
 *Note: curl requires you to escape any special characters in filenames - e.g. filename\\.txt*
 
 To get file with key `mykey` from bucket:
 
-`./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey`
+<pre class="terminal">
+$ ./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey
+</pre>
 
 ##<a id='s3cmd'></a>s3cmd
 
@@ -132,15 +140,15 @@ verbosity = WARNING
 
 Bucket contents can be downloaded with the following command:
 
-```
-s3cmd -c .s3cfg sync s3://bucket-name /destination/directory
-```
+<pre class="terminal">
+$ s3cmd -c .s3cfg sync s3://bucket-name /destination/directory
+</pre>
 
 Uploading data to a bucket can be done like this:
 
-```
-s3cmd -c .s3cfg sync /source/directory/* s3://bucket-name
-```
+<pre class="terminal">
+$ s3cmd -c .s3cfg sync /source/directory/* s3://bucket-name
+</pre>
 
 Note: if you put the `.s3cfg` file in your home directory, you don't need to pass the `-c` flag.
 
@@ -150,7 +158,9 @@ Note: if you put the `.s3cfg` file in your home directory, you don't need to pas
 
 Install the fog gem:
 
-`gem install fog`
+<pre class="terminal">
+$ gem install fog
+</pre>
 
 Create a ruby client object (requires fog):
 
