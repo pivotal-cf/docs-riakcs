@@ -142,6 +142,8 @@ Uploading data to a bucket can be done like this:
 s3cmd -c .s3cfg sync /source/directory s3://bucket-name
 ```
 
+Note: if you put the `.s3cfg` file in your home directory, you don't need to pass the `-c` flag.
+
 ##<a id='fog'></a>fog
 
 [Fog](http://fog.io) requires Ruby to be installed.
