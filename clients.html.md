@@ -93,13 +93,11 @@ $ ./s3curl.pl --id myuser -- http://p-riakcs.mydomain/service-instance-id/mykey
 
 [s3cmd](http://s3tools.org/s3cmd) is a command line client for connecting to S3 compatible blobstores.
 
-A `.s3cfg` file is needed to configure s3cmd to talk to your Riak CS cluster.
-
-An example is provided below. Please adjust the `access_key`, `secret_key`, `host_base`, `host_bucket`, and `proxy_host` parameters to match your Riak CS cluster config.
+A `.s3cfg` file is needed to configure s3cmd to talk to your Riak CS cluster. An example is provided below. Update `access_key`, `secret_key`, `host_base`, `host_bucket`, and `proxy_host` with your own values.
 
 ```
 [default]
-access_key = admin-key
+access_key = my-access-key-id
 bucket_location = US
 cloudfront_host = cloudfront.amazonaws.com
 cloudfront_resource = /2010-07-15/distribution
@@ -116,19 +114,19 @@ gpg_decrypt = %(gpg_command)s -d --verbose --no-use-agent --batch --yes --passph
 gpg_encrypt = %(gpg_command)s -c --verbose --no-use-agent --batch --yes --passphrase-fd %(passphrase_fd)s -o %(output_file)s %(input_file)s
 gpg_passphrase =
 guess_mime_type = True
-host_base = p-riakcs.10.244.0.34.xip.io
-host_bucket = p-riakcs.10.244.0.34.xip.io/%(bucket)s
+host_base = p-riakcs.my-system-domain.com
+host_bucket = p-riakcs.my-system-domain.com/%(bucket)s
 human_readable_sizes = False
 list_md5 = False
 log_target_prefix =
 preserve_attrs = True
 progress_meter = True
-proxy_host = p-riakcs.10.244.0.34.xip.io
+proxy_host = p-riakcs.my-system-domain.com
 proxy_port = 80
 recursive = False
 recv_chunk = 4096
 reduced_redundancy = False
-secret_key = admin-secret
+secret_key = my-secret-access-key
 send_chunk = 4096
 simpledb_host = sdb.amazonaws.com
 skip_existing = False
@@ -137,7 +135,7 @@ urlencoding_mode = normal
 use_https = False
 verbosity = WARNING
 ```
-
+ 
 Bucket contents can be downloaded with the following command:
 
 <pre class="terminal">
