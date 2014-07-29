@@ -132,7 +132,7 @@ simpledb_host = sdb.amazonaws.com
 skip_existing = False
 socket_timeout = 300
 urlencoding_mode = normal
-use_https = False
+use_https = True
 verbosity = WARNING
 ```
  
