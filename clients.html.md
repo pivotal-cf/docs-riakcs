@@ -135,20 +135,32 @@ urlencoding_mode = normal
 use_https = True
 verbosity = WARNING
 ```
- 
-Bucket contents can be downloaded with the following command:
+
+If the `.s3cfg` file is not in your home directory, commands must be run with a flag which specifies the location of it; `-c path/to/.s3cfg`.
+
+List bucket contents:
 
 <pre class="terminal">
-$ s3cmd -c .s3cfg sync s3://bucket-name /destination/directory
+$ s3cmd ls s3://service-instance-id
+</pre>
+
+s3cmd supports a sync feature which is useful for backing up. Bucket contents can be downloaded with the following command:
+
+<pre class="terminal">
+$ s3cmd sync s3://service-instance-id /destination/directory
 </pre>
 
 Uploading data to a bucket can be done like this:
 
 <pre class="terminal">
-$ s3cmd -c .s3cfg sync /source/directory/* s3://bucket-name
+$ s3cmd sync /source/directory/* s3://service-instance-id
 </pre>
 
-Note: if you put the `.s3cfg` file in your home directory, you don't need to pass the `-c` flag.
+For more information see: 
+- [Simple S3cmd How-To](http://s3tools.org/s3cmd-howto)
+- [S3cmd Usage](http://s3tools.org/usage)
+- [S3cmd S3 Sync How-To](http://s3tools.org/s3cmd-sync)
+
 
 ##<a id='fog'></a>fog
 
