@@ -8,7 +8,7 @@ This is documentation for the Riak CS service for Pivotal CF.
 
 To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
 
-1. Download the product file from [Pivotal Network](https://network.gopivotal.com/).
+1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
 1. Click **Add** next to the uploaded product description in the Available Products view to add this product to your staging area.
 1. Click the newly added tile to review any configurable options.
@@ -30,7 +30,7 @@ $ cf restart myapp
 
 The service offers a single service plan called **developer** suitable for development workloads. Provisioning a service instance creates a private Riak CS bucket. Binding applications to the instance creates unique credentials for each application to access the bucket.
 
-There are no storage quotas on individual buckets. Service capacity is limited by persistent storage allocated to the Riak CS nodes; this defaults to 10GB but can be configured by the Operations Manager user.  
+There are no storage quotas on individual buckets. Service capacity is limited by persistent storage allocated to the Riak CS nodes; this defaults to 10GB but can be configured by the Operations Manager user.
 
 ### Using the Riak CS service
 
