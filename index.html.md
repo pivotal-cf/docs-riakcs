@@ -34,16 +34,16 @@ There are no storage quotas on individual buckets. Service capacity is limited b
 
 ### Using the Riak CS service
 
-See [Clients for Riak CS](clients.html) for a list of clients that have been validated to work with the service.
+See [Clients for Riak CS](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md) for a list of clients that have been validated to work with the service.
 
 An example application, written in Ruby and using the Fog library, can be [downloaded here](riakcs-example-app.tgz). Once you've downloaded and unpacked the tarball, see the included README for instructions.
 
 <a id="backing-up"></a>
 ### Backing Up and Restoring
 
-Using [riak-backup](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/) ([README](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/src/riak_backup)), administrators can back up data from all buckets as a batch process. This tool is distributed as [compiled binaries for linux and OSX](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/bin) (not available for Windows at this time), and requires the `cf` CLI and [s3cmd](clients.html#s3cmd) to be independently installed.
+Using [riak-backup](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/src/riak_backup)), administrators can back up data from all buckets as a batch process. This tool is distributed as [compiled binaries for linux and OSX](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/bin) (not available for Windows at this time), and requires the `cf` CLI and [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd) to be independently installed.
 
-Data can be restored one bucket at a time, by admins or end users themselves, using [s3cmd](clients.html#s3cmd). Backup data is stored in a directory tree organized by organization, spaces, and service instances. A metadata file for each instance includes which applications were bound to it.
+Data can be restored one bucket at a time, by admins or end users themselves, using [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd). Backup data is stored in a directory tree organized by organization, spaces, and service instances. A metadata file for each instance includes which applications were bound to it.
 
 ### Version
 
