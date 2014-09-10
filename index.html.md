@@ -4,9 +4,11 @@ title: Riak CS for Pivotal CF
 
 This is documentation for the Riak CS service for Pivotal CF.
 
-### Release Notes
+### Release Notes & Known Issues
 
 Consult the [Release Notes](release-notes.html) for important tips and information about changes for this product.
+
+**Note**: This product should be considered a public Beta and is not currently intended for production use.
 
 ### Install via Pivotal Operations Manager
 
@@ -52,23 +54,6 @@ Data can be restored one bucket at a time, by admins or end users themselves, us
 ### Version
 
 Versions 1.2 and 1.2.1 of this product are based on Riak CS version 1.4.4 and Riak version 1.4.7.
-
-### Known Limitations
-
-The product should be considered a public Beta and is not for production use.
-
-#### Upgrading from 1.2.0 to 1.2.1
-
-<strong>Version 1.2.0 has a known issue</strong>: the data files are stored on the ephemeral disk of the VM. If the Riak VMs are re-deployed due to a configuration change for this release in Operations Manager, data will be lost.
-
-Version 1.2.1 fixes this issue by storing data files on a persistent volume. However, we will not support upgrading from 1.2.0 to 1.2.1, as data will be lost. Users of Operations Manager must uninstall (delete) the deployment of version 1.2.0 prior to deploying version 1.2.1. The following steps can be followed to migrate your bucket data, if desired:
-
-1. Import version 1.2.1 into your Operations Manager.
-1. Follow instructions in [Backing Up and Restoring](#backing-up) to back up data for all buckets.
-1. Delete the deployment of Riak CS for Pivotal CF by clicking the trash can icon in Operations Manager, then Apply Changes. This will delete all service instances and bindings for the Riak CS service in Cloud Foundry and then tear down the Riak cluster.
-1. Add version 1.2.1 of Riak CS for Pivotal CF to Operations Manager, then Apply Changes. This will deploy a new Riak CS cluster and restore the Riak CS service to the Cloud Foundry marketplace. For applications that used the service, new instances must be created and bound.
-1. Data can be restored to these buckets by users as described in [Backing Up and Restoring](#backing-up).
-
 
 ### Further Reading
 
