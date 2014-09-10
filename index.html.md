@@ -4,6 +4,10 @@ title: Riak CS for Pivotal CF
 
 This is documentation for the Riak CS service for Pivotal CF.
 
+### Release Notes
+
+Consult the [Release Notes](release-notes.html) for important tips and information about changes for this product.
+
 ### Install via Pivotal Operations Manager
 
 To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
