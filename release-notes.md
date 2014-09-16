@@ -6,6 +6,7 @@ title: Release Notes
 
 - **Syslog forwarding**: Syslogs are now streamed to the same host and port configured in Elastic Runtime settings
 - **Trusty stemcells**: Server and broker are now deployed on Ubuntu “Trusty” 14.04 LTS stemcells, providing improved security, performance, and a smaller resource footprint.
+- **Precompiled packages**: Most packages have been precompiled for the targeted stemcell. This will lower initial deployment times, at the cost of a larger download.
 
 ## 1.2.1
 
