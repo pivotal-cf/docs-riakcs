@@ -10,15 +10,21 @@ title: Release Notes
 
 ### Upgrading from 1.2.1 to 1.3.0
 
-Version 1.2.1 had a minimum setting for ephemeral storage on the Riak CS and Stanchion VMs which was too low to accomodate the additional packages installed for 1.3.0. This minimum has been raised, but deploying the upgrade without the following steps will result in a failed deploy.
+Version 1.2.1 had a default setting for Ephemeral Disk for the Riak CS and Stanchion jobs which was too low to support an upgrade to 1.3.0. The upgrade will fail with the error `No space left on device` unless Ephemeral Disk is increased to at least 4096 MB prior to upgrading.
+
+Disregard this issue if:
+- Ephemeral Disk for Riak CS Node was previously configured with at least 4096 MB
+- You are deploying Riak CS 1.3.0 without upgrading; this issue only applies to upgrades only
+
+To upgrade from 1.2.1 to 1.3.0:
 
 1.  Import the file `p-riak-cs-1.3.0.0.pivotal` into Pivotal Operations Manager
-- Select the new version and click Upgrade
-- Click on the product tile, Riak CS for Pivotal CF
+- Select the version 1.3.0 and click Upgrade
+- Click on the product tile Riak CS for Pivotal CF
 - Click Resource Config in the left navigation
 - Click Save
-- You will be prompted that the ephemeral disk for Riak CS and Stanchion do not meet required minimums. Change those values and click Save.
-- Return to the Dashboard and click Apply Changes to deploy the upgrade
+- You will be notified of configuration errors. Mousing over the highlighted fields will show that Ephemeral Disk for Riak CS Node and Stanchion jobs must be at least 4096 MB. Update these values and click Save.
+- Return to the Installation Dashboard and click Apply Changes to deploy the upgrade
 
 ## 1.2.1
 
