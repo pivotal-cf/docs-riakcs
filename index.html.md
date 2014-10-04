@@ -10,6 +10,7 @@ Consult the [Release Notes](release-notes.html) for important tips and informati
 
 ## Known Issues
 
+- Upgrading from v1.2.1 to v1.3.2 requires a resource configuration change in Operations Manager. See [Release Notes](release-notes.html) for details.
 - Garbage collection is not yet reliable. When objects are deleted, they are no longer listed for bucket contents, but they may not be deleted from disk. This can lead to persistent disk filling up. Until this issue is resolved, operators should increase the persistent disk allocated to Riak CS nodes.
 
 **Note**: This product should be considered a public Beta and is not currently intended for production use.
