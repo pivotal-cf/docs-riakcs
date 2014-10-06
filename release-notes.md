@@ -6,7 +6,7 @@ title: Release Notes
 
 - **Syslog forwarding**: Syslogs are now streamed to the same host and port configured in Elastic Runtime settings
 - **Precompiled packages**: Most packages have been precompiled for the targeted stemcell. This will lower initial deployment times, at the cost of a larger download.
-- **Trusty stemcell**: Server and broker are now deployed on the Ubuntu “Trusty” 14.04 LTS stemcell, providing improved security, performance, and a smaller resource footprint. This stemcell also addresses "shellshock" vulnerabilities.
+- **Trusty stemcell**: Server and broker are now deployed on the Ubuntu “Trusty” 14.04 LTS stemcell, providing improved security, performance, and a smaller resource footprint. This stemcell addresses bash-shellshock vulnerabilities discussed [here](http://www.pivotal.io/security/CVE-2014-6271) and [here](http://www.pivotal.io/security/CVE-2014-7186).
 
 ### Upgrading from 1.2.1 to 1.3.2
 
