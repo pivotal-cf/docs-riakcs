@@ -17,7 +17,7 @@ Version 1.2.1 had a default setting for Ephemeral Disk for the Riak CS and Stanc
 - Ephemeral Disk for Riak CS Node was previously configured with at least 4096 MB
 - You are deploying Riak CS 1.3.2 without upgrading; this issue only applies to upgrades only
 
-#### To upgrade from 1.2.1 to 1.3.0:
+#### To upgrade from 1.2.1 to 1.3.2:
 
 1.  Import the file `p-riak-cs-1.3.2.0.pivotal` into Pivotal Operations Manager
 - Select the version 1.3.2 and click Upgrade
