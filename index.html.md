@@ -4,18 +4,17 @@ title: Riak CS for Pivotal CF
 
 This is documentation for the Riak CS service for Pivotal CF.
 
-## Release Notes
+## <a id="release-notes"></a>Release Notes ##
 
 Consult the [Release Notes](release-notes.html) for important tips and information about changes for this product.
 
-## Known Issues
+## <a id="known-issues"></a>Known Issues ##
 
-- Upgrading from v1.2.1 to v1.3.2 requires a resource configuration change in Operations Manager. See [Release Notes](release-notes.html) for details.
-- Garbage collection is not yet reliable. When objects are deleted, they are no longer listed for bucket contents, but they may not be deleted from disk. This can lead to persistent disk filling up. Until this issue is resolved, operators should increase the persistent disk allocated to Riak CS nodes.
+- Upgrading from v1.3.2 to v1.3.3 requires a resource configuration change in Operations Manager. See [Release Notes](release-notes.html) for details.
 
-**Note**: This product should be considered a public Beta and is not currently intended for production use.
+**Note**: This product should be considered a public Beta and is not currently intended for production workloads.
 
-## Install via Pivotal Operations Manager
+## <a id="installation"></a>Installation ##
 
 To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
 
@@ -27,7 +26,15 @@ To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal O
 
 This product requires Pivotal CF version 1.2 or greater.
 
-## Provisioning and Binding via Cloud Foundry
+## <a id="settings"></a>Settings ##
+
+### <a id="service-plan"></a>Service Plan ###
+
+The service offers a single service plan called **developer** suitable for development workloads. Provisioning a service instance creates a private Riak CS bucket. Binding applications to the instance creates unique credentials for each application to access the bucket.
+
+There are no storage quotas on individual buckets. Service capacity is limited by persistent storage allocated to the Riak CS nodes; this defaults to 10GB but can be configured by the Operations Manager user.
+
+## <a id="provision-and-bind"></a>Provisioning and Binding via Cloud Foundry ##
 
 Once you have installed the product, it automatically registers itself with your Elastic Runtime. At this point, the product is available to your application developers, either in the Marketplace in the web based console, or via `cf marketplace`. They can add, provision, and bind the service to their applications like any other CF service:
 
@@ -37,19 +44,18 @@ $ cf bind-service myapp mybucket
 $ cf restart myapp
 </pre>
 
-## Available Plans
+## <a id="using-the-service"></a>Using the Riak CS service ##
 
-The service offers a single service plan called **developer** suitable for development workloads. Provisioning a service instance creates a private Riak CS bucket. Binding applications to the instance creates unique credentials for each application to access the bucket.
-
-There are no storage quotas on individual buckets. Service capacity is limited by persistent storage allocated to the Riak CS nodes; this defaults to 10GB but can be configured by the Operations Manager user.
-
-### Using the Riak CS service
+### <a id="clients"></a>S3 Clients ###
 
 See [Clients for Riak CS](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md) for a list of clients that have been validated to work with the service.
+
+### <a id="example-app"></a>Example Application ###
 
 An example application, written in Ruby and using the Fog library, can be [downloaded here](riakcs-example-app.tgz). Once you've downloaded and unpacked the tarball, see the included README for instructions.
 
 <a id="backing-up"></a>
+
 ## Backing Up and Restoring
 
 Using [riak-backup](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/src/riak_backup)), administrators can back up data from all buckets as a batch process. This tool is distributed as [compiled binaries for linux and OSX](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/bin) (not available for Windows at this time), and requires the `cf` CLI and [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd) to be independently installed.
@@ -58,7 +64,7 @@ Data can be restored one bucket at a time, by admins or end users themselves, us
 
 ## Version
 
-This product is currently based on Riak CS version 1.4.4 and Riak version 1.4.7.
+This product is currently based on Riak CS version 1.5.0 and Riak version 1.4.10.
 
 ## Further Reading
 
