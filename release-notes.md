@@ -2,7 +2,7 @@
 title: Release Notes
 ---
 
-## <a id="1.3.3"></a>1.3.3 ##
+## <a id="1-3-3"></a>1.3.3 ##
 
 - **Improved garbage collection**: persistent disk is reliably reclaimed asynchronously after objects are deleted
 - **Requires Operations Manager version 1.3.4 or greater**
@@ -25,7 +25,7 @@ Version 1.3.2 had a default setting for Ephemeral Disk for the RiakCS Broker job
 - Configuration issues will be highlighted in red. Mousing over the highlighted field will show that Ephemeral Disk for RiakCS must be at least 2048 MB. Update this values and click Save.
 - Return to the Installation Dashboard and click Apply Changes to deploy the upgrade
 
-## <a id="1.3.2"></a>1.3.2 ##
+## <a id="1-3-2"></a>1.3.2 ##
 
 - **Syslog forwarding**: Syslogs are now streamed to the same host and port configured in Elastic Runtime settings
 - **Precompiled packages**: Most packages have been precompiled for the targeted stemcell. This will lower initial deployment times, at the cost of a larger download.
@@ -50,7 +50,7 @@ Version 1.2.1 had a default setting for Ephemeral Disk for the Riak CS and Stanc
 - You will be notified of configuration errors. Mousing over the highlighted fields will show that Ephemeral Disk for Riak CS Node and Stanchion jobs must be at least 4096 MB. Update these values and click Save.
 - Return to the Installation Dashboard and click Apply Changes to deploy the upgrade
 
-## <a id="1.2.1"></a>1.2.1 ##
+## <a id="1-2-1"></a>1.2.1 ##
 
 - **Persistence**: Data is now stored on a persistent volume.
 
@@ -66,6 +66,6 @@ Version 1.2.1 fixes this issue by storing data files on a persistent volume. How
 1. Add version 1.2.1 of Riak CS for Pivotal CF to Operations Manager, then Apply Changes. This will deploy a new Riak CS cluster and restore the Riak CS service to the Cloud Foundry marketplace. For applications that used the service, new instances must be created and bound.
 1. Data can be restored to these buckets by users as described in [Backing Up and Restoring](index.html#backing-up).
 
-## <a id="1.2.0"></a>1.2.0 ##
+## <a id="1-2-0"></a>1.2.0 ##
 
 - **Initial Release**
