@@ -20,7 +20,7 @@ Version 1.3.2 had a default setting for Ephemeral Disk for the RiakCS Broker job
 
 1.  Import the file `p-riak-cs-1.3.3.0.pivotal` into Pivotal Operations Manager version 1.3.4 or greater
 - Select the version 1.3.3 and click Upgrade
-- If a configuration change is required, the product tile for Riak CS will be highlighted in orange. Operations Manager will prevent deployment until these changes are addressed. Click on the product tile Riak CS for Pivotal CF.
+- If a configuration change is required, the product tile for Riak CS will be highlighted in orange. Operations Manager will prevent deployment until these changes are addressed. Click on the product tile Riak CS for PCF.
 - If a configuration change is required, the Resource Config tab in the left navigation will be highlighted orange. Click on the Resource Config tab.
 - Configuration issues will be highlighted in red. Mousing over the highlighted field will show that Ephemeral Disk for RiakCS must be at least 2048 MB. Update this values and click Save.
 - Return to the Installation Dashboard and click Apply Changes to deploy the upgrade
@@ -44,7 +44,7 @@ Version 1.2.1 had a default setting for Ephemeral Disk for the Riak CS and Stanc
 
 1.  Import the file `p-riak-cs-1.3.2.0.pivotal` into Pivotal Operations Manager
 - Select the version 1.3.2 and click Upgrade
-- Click on the product tile Riak CS for Pivotal CF
+- Click on the product tile Riak CS for PCF
 - Click Resource Config in the left navigation
 - Click Save
 - You will be notified of configuration errors. Mousing over the highlighted fields will show that Ephemeral Disk for Riak CS Node and Stanchion jobs must be at least 4096 MB. Update these values and click Save.
@@ -62,8 +62,8 @@ Version 1.2.1 fixes this issue by storing data files on a persistent volume. How
 
 1. Import version 1.2.1 into your Operations Manager.
 1. Follow instructions in [Backing Up and Restoring](index.html#backing-up) to back up data for all buckets.
-1. Delete the deployment of Riak CS for Pivotal CF by clicking the trash can icon in Operations Manager, then Apply Changes. This will delete all service instances and bindings for the Riak CS service in Cloud Foundry and then tear down the Riak cluster.
-1. Add version 1.2.1 of Riak CS for Pivotal CF to Operations Manager, then Apply Changes. This will deploy a new Riak CS cluster and restore the Riak CS service to the Cloud Foundry marketplace. For applications that used the service, new instances must be created and bound.
+1. Delete the deployment of Riak CS for PCF by clicking the trash can icon in Operations Manager, then Apply Changes. This will delete all service instances and bindings for the Riak CS service in Cloud Foundry and then tear down the Riak cluster.
+1. Add version 1.2.1 of Riak CS for PCF to Operations Manager, then Apply Changes. This will deploy a new Riak CS cluster and restore the Riak CS service to the Cloud Foundry marketplace. For applications that used the service, new instances must be created and bound.
 1. Data can be restored to these buckets by users as described in [Backing Up and Restoring](index.html#backing-up).
 
 ## <a id="1-2-0"></a>1.2.0 ##

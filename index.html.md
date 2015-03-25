@@ -1,8 +1,8 @@
 ---
-title: Riak CS for Pivotal CF
+title: Riak CS for Pivotal Cloud Foundry
 ---
 
-This is documentation for the Riak CS service for Pivotal CF.
+This is documentation for the [Riak CS service](https://network.pivotal.io/products/p-riakcs) for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
 ## <a id="release-notes"></a>Release Notes ##
 
@@ -16,7 +16,7 @@ Consult the [Release Notes](release-notes.html) for important tips and informati
 
 ## <a id="installation"></a>Installation ##
 
-To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal Ops Manager tiles:
+To install Riak CS for PCF, follow the procedure for installing Pivotal Operations Manager tiles:
 
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/).
 1. Upload the product file to your Ops Manager installation.
@@ -24,7 +24,7 @@ To install Riak CS for Pivotal CF, follow the procedure for installing Pivotal O
 1. Click the newly added tile to review any configurable options.
 1. Click **Apply Changes** to install the service.
 
-This product requires Pivotal CF version 1.2 or greater.
+This product requires PCF version 1.2 or greater.
 
 ## <a id="settings"></a>Settings ##
 
