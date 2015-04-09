@@ -12,7 +12,7 @@ title: Release Notes
   - Precompiled packages are no longer included.
   - p-riak-cs 1.4.0 requires Operations Manager 1.4.0
 - **Cluster node changes:** Ephemeral disk default of 1GB is now 2GB.
-- **Bug Fix:** Addresses an issuewith creating service instances which occasionally gives the error: `403 Forbidden ("InvalidAccessKeyId The AWS Access Key Id you provided does not exist in our records")`
+- **Bug Fix:** Addresses an issue when creating service instances which occasionally gives the error: `403 Forbidden ("InvalidAccessKeyId The AWS Access Key Id you provided does not exist in our records")`
 - **Upgrade support:** p-riak-cs 1.4.0 can be automatically upgraded from either p-riak-cs 1.3.2 or 1.3.3
 
 ## <a id="1-3-3"></a>1.3.3 ##
