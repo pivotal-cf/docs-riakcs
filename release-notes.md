@@ -1,6 +1,19 @@
 ---
 title: Release Notes
 ---
+## <a id="1-4-0"></a>1.4.0 ##
+
+- **AWS support:** The Riak CS service can now be deployed on Amazon Web Services from the Operations Manager Web UI.
+  - Deployment is limited to a single Availability Zone. Look for multi-AZ in future releases.
+  - Single availability zone is a limitation on AWS only. Operations Manager on vSphere continues to support deployment to multiple availability zones.
+  - The defailt instance type for the cluster nodes on AWS is m3.large.
+- **IaaS agnostic**
+  - The same product can be deployed to both AWS and vSphere.
+  - Precompiled packages are no longer included.
+  - p-riak-cs 1.4.0 requires Operations Manager 1.4.0
+- **Cluster node changes:** Ephemeral disk default of 1GB is now 2GB.
+- **Bug Fix:** Addresses an issuewith creating service instances which occasionally gives the error: `403 Forbidden ("InvalidAccessKeyId The AWS Access Key Id you provided does not exist in our records")`
+- **Upgrade support:** p-riak-cs 1.4.0 can be automatically upgraded from either p-riak-cs 1.3.2 or 1.3.3
 
 ## <a id="1-3-3"></a>1.3.3 ##
 
