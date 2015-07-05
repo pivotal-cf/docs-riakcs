@@ -15,6 +15,12 @@ title: Release Notes
 - **Bug Fix:** Addresses an issue when creating service instances which occasionally gives the error: `403 Forbidden ("InvalidAccessKeyId The AWS Access Key Id you provided does not exist in our records")`
 - **Upgrade support:** p-riak-cs 1.4.0 can be automatically upgraded from either p-riak-cs 1.3.2 or 1.3.3
 
+**Known issues:**
+
+* On AWS, this version supports deployments in the US-East region. Multi-region support is coming in a future release.
+* The experimental HTTPS-only feature in Elastic Runtime 1.5 may cause issues with this version of the product. Full support for HTTPS-only trafic is coming in a future release.
+* Note: BOSH Stemcell 2865.1 is required for installation on Ops Manager 1.5.x and above.
+
 ## <a id="1-3-3"></a>1.3.3 ##
 
 - **Improved garbage collection**: persistent disk is reliably reclaimed asynchronously after objects are deleted
