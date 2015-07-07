@@ -6,7 +6,7 @@ title: Release Notes
 - **AWS support:** The Riak CS service can now be deployed on Amazon Web Services from the Operations Manager Web UI.
   - Deployment is limited to a single Availability Zone. Look for multi-AZ in future releases.
   - Single availability zone is a limitation on AWS only. Operations Manager on vSphere continues to support deployment to multiple availability zones.
-  - The defailt instance type for the cluster nodes on AWS is m3.large.
+  - The default instance type for the cluster nodes on AWS is m3.large.
 - **IaaS agnostic**
   - The same product can be deployed to both AWS and vSphere.
   - Precompiled packages are no longer included.
