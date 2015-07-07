@@ -4,6 +4,44 @@ title: Riak CS for Pivotal Cloud Foundry
 
 This is documentation for the [Riak CS service](https://network.pivotal.io/products/p-riakcs) for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
 
+## Product Snapshot
+
+Current Riak CS for Pivotal Cloud Foundry Details
+<div style="line-height: 1; padding-left: 3em">
+
+- **Version**: 1.4.0
+- **Release Date**: 2015-04-14
+- **Software component version**: Riak CS 1.5.4, Riak 1.4.12
+- **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x
+- **Compatible Elastic Runtime Version(s)**: 1.3.x, 1.4.5, 1.5.x
+- **vSphere support?** Yes
+- **AWS support?** Yes
+- **OpenStack support?** No
+
+</div>
+
+## Upgrading to the Latest Version
+Consider the following compatibility information before upgrading Riak CS for Pivotal Cloud Foundry.
+
+<p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x or 1.5.x, you must first upgrade Riak CS for PCF to any version of 1.3. This allows Riak CS for PCF upgrades after you install OpsManager 1.4.x.</p>
+
+For more information, refer to the full Product Version Matrix.
+
+<table border="1" class="nice">
+<tr><th>OpsManager Version</th>
+    <th>Supported Upgrades from Imported Riak CS Installation</th></tr>
+<tr><th>1.3.x</th>
+    <td><ul>
+        <li>From 1.2.1 to 1.3.2</li>
+        <li>From 1.3.2 to 1.3.3/li>
+        </ul></td></tr>
+<tr><th>1.4.x and 1.5.x</th>
+    <td><ul>
+        <li>From 1.3.2 to 1.4.0</li>
+        <li>From 1.3.3 to 1.4.0</li>
+        </ul></td></tr>
+</table>
+
 ## <a id="release-notes"></a>Release Notes ##
 
 Consult the [Release Notes](release-notes.html) for important tips and information about changes for this product.
