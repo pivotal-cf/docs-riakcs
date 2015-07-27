@@ -1,6 +1,17 @@
 ---
 title: Release Notes
 ---
+
+## <a id="1-5-0"></a>1.5.0 ##
+
+A minor release.
+
+- Updates to support the experimental HTTPS-only feature in Elastic Runtime 1.5.
+- Documentation now includes a new section, [Managing Your Cluster](managing_your_cluster.html).
+
+* Note: BOSH Stemcell 3012 is required for installation on Ops Manager 1.5.x and above.
+
+
 ## <a id="1-4-0"></a>1.4.0 ##
 
 - **AWS support:** The Riak CS service can now be deployed on Amazon Web Services from the Operations Manager Web UI.

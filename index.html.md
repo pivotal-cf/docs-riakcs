@@ -9,14 +9,14 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 Current Riak CS for Pivotal Cloud Foundry Details
 <div style="line-height: 1; padding-left: 3em">
 
-- **Version**: 1.4.0
-- **Release Date**: 2015-04-14
+- **Version**: 1.5.0
+- **Release Date**: 2015-07-24
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
 - **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x
 - **Compatible Elastic Runtime Version(s)**: 1.3.x, 1.4.5, 1.5.x
 - **vSphere support?** Yes
 - **AWS support?** Yes
-- **OpenStack support?** No
+- **OpenStack support?** Beta
 
 </div>
 
@@ -33,12 +33,14 @@ For more information, refer to the full Product Version Matrix.
 <tr><th>1.3.x</th>
     <td><ul>
         <li>From 1.2.1 to 1.3.2</li>
-        <li>From 1.3.2 to 1.3.3/li>
+        <li>From 1.3.2 to 1.3.3</li>
         </ul></td></tr>
 <tr><th>1.4.x and 1.5.x</th>
     <td><ul>
         <li>From 1.3.2 to 1.4.0</li>
         <li>From 1.3.3 to 1.4.0</li>
+        <li>From 1.3.3 to 1.5.0</li>
+        <li>From 1.4.0 to 1.5.0</li>
         </ul></td></tr>
 </table>
 
@@ -65,6 +67,10 @@ To install Riak CS for PCF, follow the procedure for installing Pivotal Operatio
 This product requires PCF version 1.2 or greater.
 
 ## <a id="settings"></a>Settings ##
+
+### <a id="cluster-components"></a>Understanding Cluster Components ###
+
+See [Managing Your Cluster](managing_your_cluster.html) for a description of the different components deployed by this product, and how they can be scaled up and down depending on your requirements.
 
 ### <a id="service-plan"></a>Service Plan ###
 
