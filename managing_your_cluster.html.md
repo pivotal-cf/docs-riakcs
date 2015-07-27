@@ -4,13 +4,13 @@ title: Managing your Cluster
 
 ##Stanchion
 ###What is Stanchion?
-Stanchion is an application used by Riak CS to manage the serialization of requests, which enables Riak CS to manage globally unique entities like **users** and **bucket names**. Stanchion runs on its own VM. Futher details can be found on [Basho's website](https://docs.basho.com/riakcs/latest/theory/stanchion/).
+Stanchion is an application used by Riak CS to manage the serialization of requests, which enables Riak CS to manage globally unique entities like **users** and **bucket names**. Stanchion runs on its own VM. Further details can be found on [Basho's website](https://docs.basho.com/riakcs/latest/theory/stanchion/).
 
 ###Scaling Stanchion
 
 Stanchion cannot be scaled. There should one and only one Stanchion node within a riak-cs cluster.
 
-Note: If the cluster is managed by [BOSH](https://bosh.io/), it (BOSH) must be configured in [resurrect](https://bosh.io/docs/sysadmin-commands.html#health) mode to auto-recover the Stanchion node in the event of node failure.
+Note: If the cluster is managed by [BOSH](https://bosh.io/), BOSH must be configured in [resurrect](https://bosh.io/docs/sysadmin-commands.html#health) mode to auto-recover the Stanchion node in the event of node failure.
 
 ##Service Brokers
 ###What are Service Brokers?
