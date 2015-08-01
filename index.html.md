@@ -9,8 +9,8 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 Current Riak CS for Pivotal Cloud Foundry Details
 <div style="line-height: 1; padding-left: 3em">
 
-- **Version**: 1.5.0
-- **Release Date**: 2015-07-24
+- **Version**: 1.5.1
+- **Release Date**: 2015-07-31
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
 - **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x
 - **Compatible Elastic Runtime Version(s)**: 1.3.x, 1.4.5, 1.5.x
@@ -39,7 +39,6 @@ For more information, refer to the full Product Version Matrix.
     <td><ul>
         <li>From 1.3.2 to 1.4.0</li>
         <li>From 1.3.3 to 1.4.0</li>
-        <li>From 1.3.3 to 1.5.0</li>
         <li>From 1.4.0 to 1.5.0</li>
         </ul></td></tr>
 </table>
