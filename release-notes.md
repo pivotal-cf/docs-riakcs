@@ -2,14 +2,14 @@
 title: Release Notes
 ---
 
-## <a id="1-5-0"></a>1.5.0 ##
+## <a id="1-5-0"></a>1.5.1 ##
 
 A minor release.
 
 - Updates to support the experimental HTTPS-only feature in Elastic Runtime 1.5.
 - Documentation now includes a new section, [Managing Your Cluster](managing_your_cluster.html).
 
-* Note: BOSH Stemcell 3012 is required for installation on Ops Manager 1.5.x and above.
+* **Note:** BOSH Stemcell 3026 is required; this stemcell is provided by Ops Manager 1.5.1.
 
 
 ## <a id="1-4-0"></a>1.4.0 ##
