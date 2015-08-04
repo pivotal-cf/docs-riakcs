@@ -25,7 +25,7 @@ Consider the following compatibility information before upgrading Riak CS for Pi
 
 <p class="note"><strong>Note</strong>: Before you upgrade to Ops Manager 1.4.x or 1.5.x, you must first upgrade Riak CS for PCF to any version of 1.3. This allows Riak CS for PCF upgrades after you install OpsManager 1.4.x.</p>
 
-For more information, refer to the full Product Version Matrix.
+For more information, refer to the full [Product Version Matrix](../compatibility-matrix.pdf).
 
 <table border="1" class="nice">
 <tr><th>OpsManager Version</th>
