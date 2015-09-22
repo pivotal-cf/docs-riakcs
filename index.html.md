@@ -7,8 +7,6 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 ## Product Snapshot
 
 Current Riak CS for Pivotal Cloud Foundry Details
-<div style="line-height: 1; padding-left: 3em">
-
 - **Version**: 1.5.2
 - **Release Date**: 2015-09-22
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
@@ -17,8 +15,6 @@ Current Riak CS for Pivotal Cloud Foundry Details
 - **vSphere support?** Yes
 - **AWS support?** Yes
 - **OpenStack support?** Beta
-
-</div>
 
 ## Upgrading to the Latest Version
 Consider the following compatibility information before upgrading Riak CS for Pivotal Cloud Foundry.
