@@ -2,7 +2,11 @@
 title: Release Notes
 ---
 
-## <a id="1-5-0"></a>1.5.1 ##
+## <a id="1-5-2"></a>1.5.2 ##
+
+- Updated stemcell to 3026 to resolve CVE-2015-3290
+
+## <a id="1-5-1"></a>1.5.1 ##
 
 A minor release.
 
