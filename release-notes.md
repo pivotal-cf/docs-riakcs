@@ -2,9 +2,14 @@
 title: Release Notes
 ---
 
+## <a id="1-5-3"></a>1.5.3 ##
+
+- Updated stemcell to 3094 and ruby to v2.2.3 to resolve CVE-2015-3900, a man-in-the-middle rubygems vulnerability.
+- A minor fix for HTTPS-only mode, now acceptance tests will successfully pass as well.
+
 ## <a id="1-5-2"></a>1.5.2 ##
 
-- Updated stemcell to 3026 to resolve CVE-2015-3290
+- Updated stemcell to 3062 to resolve CVE-2015-3290
 
 ## <a id="1-5-1"></a>1.5.1 ##
 
