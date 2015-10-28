@@ -9,14 +9,14 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 Current Riak CS for Pivotal Cloud Foundry Details
 <div style="line-height: 1; padding-left: 3em">
 
-- **Version**: 1.5.2
-- **Release Date**: 2015-09-22
+- **Version**: 1.5.3
+- **Release Date**: 2015-10-27
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
-- **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x
-- **Compatible Elastic Runtime Version(s)**: 1.3.x, 1.4.5, 1.5.x
+- **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x, 1.6.x
+- **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x, 1.6.x
 - **vSphere support?** Yes
 - **AWS support?** Yes
-- **OpenStack support?** Beta
+- **OpenStack support?** Yes
 </div>
 
 ## <a id="upgrading"></a>Upgrading to the Latest Version ##
@@ -39,10 +39,15 @@ For more information, refer to the full [Product Version Matrix](../compatibilit
     <td><ul>
         <li>From 1.3.2 to 1.4.0</li>
         <li>From 1.3.3 to 1.4.0</li>
-        <li>From 1.4.0 to 1.5.1</li>
-        <li>From 1.4.0 to 1.5.2</li>
-        <li>From 1.5.1 to 1.5.2</li>
+        <li>From 1.4.0 to 1.5.1 - 1.5.3</li>
+        <li>From 1.5.1 to 1.5.2, 1.5.3</li>
+        <li>From 1.5.2 to 1.5.3</li>
         </ul></td></tr>
+<tr><th>1.6.x</th>
+    <td><ul>
+        <li>From 1.4.0 to 1.5.1 - 1.5.3</li>
+        <li>From 1.5.1 to 1.5.2, 1.5.3</li>
+        <li>From 1.5.2 to 1.5.3</li>
 </table>
 
 ## <a id="release-notes"></a>Release Notes ##
@@ -52,8 +57,7 @@ Consult the [Release Notes](release-notes.html) for important tips and informati
 ## <a id="known-issues"></a>Known Issues ##
 
 - Upgrading from v1.3.2 to v1.3.3 requires a resource configuration change in Operations Manager. See [Release Notes](release-notes.html) for details.
-
-**Note**: This product should be considered a public Beta and is not currently intended for production workloads.
+- **Note**: This product should be considered for development use only and is not intended for production use.
 
 ## <a id="installation"></a>Installation ##
 
@@ -103,13 +107,10 @@ An example application, written in Ruby and using the Fog library, can be [downl
 
 ## Backing Up and Restoring
 
-Using [riak-backup](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/src/riak_backup)), administrators can back up data from all buckets as a batch process. This tool is distributed as [compiled binaries for linux and OSX](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/bin) (not available for Windows at this time), and requires the `cf` CLI and [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd) to be independently installed.
+Using [riak-backup](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/src/riak_backup), administrators can back up data from all buckets as a batch process. This tool is distributed as [compiled binaries for linux and OSX](https://github.com/cloudfoundry/cf-riak-cs-release/tree/master/scripts/riak-backup/bin) (not available for Windows at this time), and requires the `cf` CLI and [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd) to be independently installed.
 
 Data can be restored one bucket at a time, by admins or end users themselves, using [s3cmd](https://github.com/cloudfoundry/cf-riak-cs-release/blob/master/docs/clients.md#s3cmd). Backup data is stored in a directory tree organized by organization, spaces, and service instances. A metadata file for each instance includes which applications were bound to it.
 
-## Version
-
-This product is currently based on Riak CS version 1.5.0 and Riak version 1.4.10.
 
 ## Further Reading
 
