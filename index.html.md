@@ -13,7 +13,7 @@ Current Riak CS for Pivotal Cloud Foundry Details
 - **Release Date**: 2015-10-27
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
 - **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x, 1.6.x
-- **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x, 1.6.x
+- **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x
 - **vSphere support?** Yes
 - **AWS support?** Yes
 - **OpenStack support?** Yes
