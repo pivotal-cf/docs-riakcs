@@ -2,6 +2,14 @@
 title: Release Notes
 ---
 
+## <a id="1-5-4"></a>1.5.4 ##
+
+Release date: 3 November 2015
+
+Updated stemcell to 3112. This is a regular security upgrade that resolves the following issues:
+
+- [[USN-2778-1](http://people.canonical.com/~ubuntu-security/cve/2015/CVE-2015-5156.html)] Linux kernel (Vivid HWE) vulnerabilities
+
 ## <a id="1-5-3"></a>1.5.3 ##
 
 - Updated stemcell to 3094 and ruby to v2.2.3 to resolve CVE-2015-3900, a man-in-the-middle rubygems vulnerability.
