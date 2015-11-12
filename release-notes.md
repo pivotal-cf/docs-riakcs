@@ -2,6 +2,15 @@
 title: Release Notes
 ---
 
+## <a id="1-5-5"></a>1.5.5 ##
+
+Release date: 12 November 2015
+
+Updated stemcell to 3130. This is a regular security upgrade that resolves the following issues:
+
+- [[USN-2806-1](http://www.ubuntu.com/usn/usn-2806-1/)] Linux kernel (Vivid HWE) vulnerability
+- [[USN-2798-1](http://www.ubuntu.com/usn/usn-2798-1/)] Linux kernel (Vivid HWE) vulnerabilities
+
 ## <a id="1-5-4"></a>1.5.4 ##
 
 Release date: 3 November 2015
