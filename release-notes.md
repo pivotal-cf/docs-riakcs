@@ -2,6 +2,22 @@
 title: Release Notes
 ---
 
+## <a id="1-5-7"></a>1.5.7 ##
+
+Release date: 04 December 2015
+
+- Updated stemcell to 3146. This is a security upgrade that resolves the following Ubuntu Security Notices:
+  - [[USN-2821-1](http://www.ubuntu.com/usn/usn-2821-1/)] GnuTLS vulnerability
+
+## <a id="1-5-6"></a>1.5.6 ##
+
+Release date: 03 December 2015
+
+- Updated stemcell to 3144. This is a regular security upgrade that resolves the following Ubuntu Security Notices:
+  - [[USN-2815-1](http://www.ubuntu.com/usn/usn-2815-1/)] libpng vulnerabilities
+  - [[USN-2812-1](http://www.ubuntu.com/usn/usn-2812-1/)] libxml2 vulnerabilities
+  - [[USN-2810-1](http://www.ubuntu.com/usn/usn-2810-1/)] Kerberos vulnerabilities
+
 ## <a id="1-5-5"></a>1.5.5 ##
 
 Release date: 12 November 2015
