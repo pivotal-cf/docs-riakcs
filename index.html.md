@@ -9,8 +9,8 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 Current Riak CS for Pivotal Cloud Foundry&reg; Details
 <div style="line-height: 1; padding-left: 3em">
 
-- **Version**: 1.5.7
-- **Release Date**: 2015-12-04
+- **Version**: 1.5.8
+- **Release Date**: 2016-01-18
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
 - **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x, 1.6.x
 - **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x, 1.6.x
@@ -39,23 +39,25 @@ For more information, refer to the full [Product Version Matrix](../compatibilit
     <td><ul>
         <li>From 1.3.2 to 1.4.0</li>
         <li>From 1.3.3 to 1.4.0</li>
-        <li>From 1.4.0 to 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.1 to 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.2 to 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.3 to 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.4 to 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.5 to 1.5.6, 1.5.7</li>
-        <li>From 1.5.6 to 1.5.7</li>
+        <li>From 1.4.0 to 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.1 to 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.2 to 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.3 to 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.4 to 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.5 to 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.6 to 1.5.7, 1.5.8</li>
+        <li>From 1.5.7 to 1.5.8</li>
         </ul></td></tr>
 <tr><th>1.6.x</th>
     <td><ul>
-        <li>From 1.4.0 to 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.1 to 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.2 to 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.3 to 1.5.4, 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.4 to 1.5.5, 1.5.6, 1.5.7</li>
-        <li>From 1.5.5 to 1.5.6, 1.5.7</li>
-        <li>From 1.5.6 to 1.5.7</li>
+        <li>From 1.4.0 to 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.1 to 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.2 to 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.3 to 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.4 to 1.5.5, 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.5 to 1.5.6, 1.5.7, 1.5.8</li>
+        <li>From 1.5.6 to 1.5.7, 1.5.8</li>
+        <li>From 1.5.7 to 1.5.8</li>
         </ul></td></tr>
 </table>
 

@@ -2,6 +2,12 @@
 title: Release Notes
 ---
 
+## <a id="1-5-8"></a>1.5.8 ##
+
+Release date: 18 January 2016
+
+- Updated stemcell to 3146.3. This is a security upgrade that resolves [CVE-2016-0715](https://pivotal.io/security/cve-2016-0715). Additional information can be found at https://pivotal.io/security.
+
 ## <a id="1-5-7"></a>1.5.7 ##
 
 Release date: 04 December 2015
