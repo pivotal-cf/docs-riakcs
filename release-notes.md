@@ -2,12 +2,32 @@
 title: Release Notes
 ---
 
+## <a id="1-5-10"></a>1.5.10
+
+Release date: 24 February 2016
+
+- Updated stemcell to 3146.9. This is a security upgrade that resolves the following:
+  - [USN-2910-1](http://www.ubuntu.com/usn/usn-2910-1/)
+
+  This release also includes the security updates included in stemcell 3146.8:
+  - [USN-2900-1](http://www.ubuntu.com/usn/usn-2900-1/), a critical GNU C lib (glibc) CVE
+  - [USN-2897-1](http://www.ubuntu.com/usn/usn-2897-1/)
+  - [USN-2896-1](http://www.ubuntu.com/usn/usn-2896-1/)
+
+Additional information can be found at https://pivotal.io/security.
+
 ## <a id="1-5-9"></a> 1.5.9 ##
 
 Release date: 2 February 2016
 
 - Updated stemcell to 3146.6. This is a security upgrade that resolves the following:
-  - [USN-2882-1](http://www.ubuntu.com/usn/usn-2882-1), [USN-2879-1](http://www.ubuntu.com/usn/usn-2879-1), [USN-2875-1](http://www.ubuntu.com/usn/usn-2875-1), [USN-2871-1](http://www.ubuntu.com/usn/usn-2871-1/), [USN-2868-1](http://www.ubuntu.com/usn/usn-2868-1), [USN-2865-1](http://www.ubuntu.com/usn/usn-2865-1), [USN-2861-1](http://www.ubuntu.com/usn/usn-2861-1)
+  - [USN-2882-1](http://www.ubuntu.com/usn/usn-2882-1/)
+  - [USN-2879-1](http://www.ubuntu.com/usn/usn-2879-1/)
+  - [USN-2875-1](http://www.ubuntu.com/usn/usn-2875-1/)
+  - [USN-2871-1](http://www.ubuntu.com/usn/usn-2871-1/)
+  - [USN-2868-1](http://www.ubuntu.com/usn/usn-2868-1/)
+  - [USN-2865-1](http://www.ubuntu.com/usn/usn-2865-1/)
+  - [USN-2861-1](http://www.ubuntu.com/usn/usn-2861-1/)
 
 Additional information can be found at https://pivotal.io/security.
 
