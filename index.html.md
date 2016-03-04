@@ -1,5 +1,6 @@
 ---
 title: Riak CS for Pivotal Cloud Foundry&reg;
+owner: Riak
 ---
 
 This is documentation for the [Riak CS service](https://network.pivotal.io/products/p-riakcs) for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF).

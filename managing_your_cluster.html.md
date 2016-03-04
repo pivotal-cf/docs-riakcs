@@ -1,5 +1,6 @@
 ---
 title: Managing your Cluster
+owner: Riak
 ---
 
 ##Stanchion

@@ -1,5 +1,6 @@
 ---
 title: Release Notes
+owner: Riak
 ---
 
 ## <a id="1-5-10"></a>1.5.10
