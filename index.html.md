@@ -29,41 +29,44 @@ Consider the following compatibility information before upgrading Riak CS for Pi
 For more information, refer to the full [Product Version Matrix](../compatibility-matrix.pdf).
 
 <table border="1" class="nice">
-<tr><th>OpsManager Version</th>
-    <th>Supported Upgrades from Imported Riak CS Installation</th></tr>
-<tr><th>1.3.x</th>
-    <td><ul>
-        <li>From 1.2.1 to 1.3.2</li>
-        <li>From 1.3.2 to 1.3.3</li>
-        </ul></td></tr>
-<tr><th>1.4.x and 1.5.x</th>
-    <td><ul>
-        <li>From 1.3.2 to 1.4.0</li>
-        <li>From 1.3.3 to 1.4.0</li>
-        <li>From 1.4.0 to all releases 1.5.1 through 1.5.10</li>
-        <li>From 1.5.1 to all releases 1.5.2 through 1.5.10</li>
-        <li>From 1.5.2 to all releases 1.5.3 through 1.5.10</li>
-        <li>From 1.5.3 to all releases 1.5.4 through 1.5.10</li>
-        <li>From 1.5.4 to all releases 1.5.5 through 1.5.10</li>
-        <li>From 1.5.5 to all releases 1.5.6 through 1.5.10</li>
-        <li>From 1.5.6 to all releases 1.5.7 through 1.5.10</li>
-        <li>From 1.5.7 to all releases 1.5.8 through 1.5.10</li>
-        <li>From 1.5.8 to 1.5.9 and 1.5.10</li>
-        <li>From 1.5.9 to 1.5.10</li>
-        </ul></td></tr>
-<tr><th>1.6.x</th>
-    <td><ul>
-        <li>From 1.4.0 to all releases 1.5.1 through 1.5.10</li>
-        <li>From 1.5.1 to all releases 1.5.2 through 1.5.10</li>
-        <li>From 1.5.2 to all releases 1.5.3 through 1.5.10</li>
-        <li>From 1.5.3 to all releases 1.5.4 through 1.5.10</li>
-        <li>From 1.5.4 to all releases 1.5.5 through 1.5.10</li>
-        <li>From 1.5.5 to all releases 1.5.6 through 1.5.10</li>
-        <li>From 1.5.6 to all releases 1.5.7 through 1.5.10</li>
-        <li>From 1.5.7 to all releases 1.5.8 through 1.5.10</li>
-        <li>From 1.5.8 to 1.5.9 and 1.5.10</li>
-        <li>From 1.5.9 to 1.5.10</li>
-        </ul></td></tr>
+<tr>
+	<th rowspan="2">Ops Manager Version</th>
+	<th colspan="2">Supported Upgrades from Imported Riak CS Installation</th>
+</tr>
+
+<tr>
+	<th>From</th>
+	<th>To</th>
+</tr>
+
+<tr>
+	<th rowspan="2">1.3.x</th>
+	<td>1.2.1</td>
+	<td>1.3.2</td>
+</tr>
+
+<tr>
+	<td>1.3.2</td>
+	<td>1.3.3</td>
+</tr>
+
+<tr>
+	<th>1.4.x and 1.5.x</th>
+	<td>1.3.2, 1.3.3</td>
+	<td>1.4.0</td>
+</tr>
+
+<tr>
+	<th rowspan="2">1.4.x, 1.5.x, and 1.6.x</th>
+	<td>1.4.0</td>
+	<td>1.5.1 - 1.5.10</td>
+</tr>
+
+<tr>
+	<td>1.5.1 - 1.5.9</td>
+	<td>Next 1.5.x release - 1.5.10</td>
+</tr>
+
 </table>
 
 ## <a id="release-notes"></a>Release Notes ##
