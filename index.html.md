@@ -10,11 +10,11 @@ This is documentation for the [Riak CS service](https://network.pivotal.io/produ
 Current Riak CS for Pivotal Cloud Foundry&reg; Details
 <div style="line-height: 1; padding-left: 3em">
 
-- **Version**: 1.5.11
-- **Release Date**: 2016-03-16
+- **Version**: 1.5.12
+- **Release Date**: 2016-05-18
 - **Software component version**: Riak CS 1.5.4, Riak 1.4.12
-- **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x, 1.6.x
-- **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x, 1.6.x
+- **Compatible Ops Manager Version(s)**: 1.4.x, 1.5.x, 1.6.x, 1.7.x
+- **Compatible Elastic Runtime Version(s)**: 1.4.5, 1.5.x, 1.6.x, 1.7.x
 - **vSphere support?** Yes
 - **AWS support?** Yes
 - **OpenStack support?** Yes
@@ -59,12 +59,12 @@ For more information, refer to the full [Product Version Matrix](../compatibilit
 <tr>
 	<th rowspan="2">1.4.x, 1.5.x, and 1.6.x</th>
 	<td>1.4.0</td>
-	<td>1.5.1 - 1.5.11</td>
+	<td>1.5.1 - 1.5.12</td>
 </tr>
 
 <tr>
-	<td>1.5.1 - 1.5.10</td>
-	<td>Next 1.5.x release - 1.5.11</td>
+	<td>1.5.1 - 1.5.11</td>
+	<td>Next 1.5.x release - 1.5.12</td>
 </tr>
 
 </table>
