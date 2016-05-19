@@ -3,13 +3,21 @@ title: Release Notes
 owner: Riak
 ---
 
+## <a id="1-5-12"></a>1.5.12
+
+Release date: 18 May 2016
+
+- Updated stemcell to 3232.4. This is a security upgrade that resolves the following:
+  - [USN-2929-1](http://www.ubuntu.com/usn/usn-2977-1/)
+
+Additional information can be found at https://pivotal.io/security.
+
 ## <a id="1-5-10"></a>1.5.11
 
 Release date: 16 March 2016
 
 - Updated stemcell to 3146.10. This is a security upgrade that resolves the following:
   - [USN-2929-1](http://www.ubuntu.com/usn/usn-2929-1/)
-
 
 Additional information can be found at https://pivotal.io/security.
 
