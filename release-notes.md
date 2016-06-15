@@ -3,6 +3,13 @@ title: Release Notes
 owner: Riak
 ---
 
+## <a id="1-5-13"></a>1.5.13
+
+Release date: 15 June 2016
+
+- Updated stemcell to 3232.8. This is a security upgrade that resolves the following:
+  - [USN-3001-1](http://www.ubuntu.com/usn/USN-3001-1/)
+
 ## <a id="1-5-12"></a>1.5.12
 
 Release date: 18 May 2016
