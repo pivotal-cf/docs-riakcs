@@ -3,6 +3,21 @@ title: Release Notes
 owner: Riak
 ---
 
+## <a id="1-5-14"></a>1.5.14
+
+Release date: 24 August 2016
+
+- **Bug:** Resolves an issue in which access logs are not automatically deleted.
+  - In addition to being automatically rotated, logs are now compressed and deleted after seven days.
+- Updated stemcell to 3232.17. This is a security upgrade that resolves the following:
+  - [USN-3064-1](http://www.ubuntu.com/usn/USN-3064-1/)
+  - [USN-3048-1](http://www.ubuntu.com/usn/USN-3048-1/)
+  - [USN-3060-1](http://www.ubuntu.com/usn/USN-3060-1/)
+  - [USN-3061-1](http://www.ubuntu.com/usn/USN-3061-1/)
+  - [USN-3065-1](http://www.ubuntu.com/usn/USN-3065-1/)
+
+Additional info can be found at https://pivotal.io/security
+
 ## <a id="1-5-13"></a>1.5.13
 
 Release date: 15 June 2016
@@ -153,7 +168,7 @@ Version 1.3.2 had a default setting for Ephemeral Disk for the RiakCS Broker job
 
 1.  Import the file `p-riak-cs-1.3.3.0.pivotal` into Pivotal Operations Manager version 1.3.4 or greater
 - Select the version 1.3.3 and click Upgrade
-- If a configuration change is required, the product tile for Riak CS will be highlighted in orange. Operations Manager will prevent deployment until these changes are addressed. Click on the product tile Riak CS for [Pivotal Cloud Foundry](https://network.pivotal.io/products/pivotal-cf) (PCF).
+- If a configuration change is required, the product tile for Riak CS will be highlighted in orange. Operations Manager will prevent deployment until these changes are addressed. Click on the product tile Riak CS for [Pivotal Cloud Foundry&reg;](https://network.pivotal.io/products/pivotal-cf) (PCF).
 - If a configuration change is required, the Resource Config tab in the left navigation will be highlighted orange. Click on the Resource Config tab.
 - Configuration issues will be highlighted in red. Mousing over the highlighted field will show that Ephemeral Disk for RiakCS must be at least 2048 MB. Update this values and click Save.
 - Return to the Installation Dashboard and click Apply Changes to deploy the upgrade
