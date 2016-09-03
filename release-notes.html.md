@@ -3,11 +3,18 @@ title: Release Notes
 owner: Riak
 ---
 
+## <a id="1-5-15"></a>1.5.15
+
+Release date: 2 September 2016
+
+- **Bug fix:** Addresses a minor issue which prevents users from upgrading to OpsManager 1.8.
+  <p class="note"><strong>Note</strong>: If the Riak CS service is installed, you must upgrade to this version of Riak CS before upgrading to OpsManager 1.8.</p>
+
 ## <a id="1-5-14"></a>1.5.14
 
 Release date: 24 August 2016
 
-- **Bug:** Resolves an issue in which access logs are not automatically deleted.
+- **Bug fix:** Resolves an issue in which access logs are not automatically deleted.
   - In addition to being automatically rotated, logs are now compressed and deleted after seven days.
 - Updated stemcell to 3232.17. This is a security upgrade that resolves the following:
   - [USN-3064-1](http://www.ubuntu.com/usn/USN-3064-1/)
