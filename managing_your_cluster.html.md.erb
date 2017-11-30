@@ -17,7 +17,7 @@ Note: If the cluster is managed by [BOSH](https://bosh.io/), BOSH must be config
 ###What are Service Brokers?
 The purpose of a service broker is solely to honor service provisioning and binding requests.
 ###Scaling Service Brokers
-If the number of service brokers available in the cluster is greater than 1, the [GoRouter](https://github.com/cloudfoundry/gorouter) will distribute requests to the Service Brokers in a [Round-robin](https://en.wikipedia.org/wiki/Round-robin_scheduling) fashion.
+If the number of service brokers available in the cluster is greater than 1, the [Gorouter](https://github.com/cloudfoundry/gorouter) will distribute requests to the Service Brokers in a [Round-robin](https://en.wikipedia.org/wiki/Round-robin_scheduling) fashion.
 
 Note: Scaling the service brokers will not increase the availability of the Riak CS services, or the applications that are bound to those services. If you have BOSH in resurrect mode on an infrastructure that has ready availability of VMs, you may not need more than one service broker. Service broker downtime only affects your ability to provision and bind services.
 
